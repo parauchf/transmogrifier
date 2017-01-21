@@ -1,7 +1,7 @@
 {
   "name": "react-redux-starter-kit",
-  "version": "3.0.0-alpha.2",
-  "description": "Get started with React, Redux, and React-Router!",
+  "version": "1.0.0",
+  "description": "A web-based geometric constraint solver for SVGs",
   "main": "index.js",
   "engines": {
     "node": ">=4.5.0",
@@ -71,9 +71,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davezuko/react-redux-starter-kit.git"
+    "url": "git+https://github.com/parauchf/transmogrifier.git"
   },
-  "author": "David Zukowski <david@zuko.me> (http://zuko.me)",
+  "author": "Pete Rauchfuss <me@peterrauchfuss.com> (http://peterrauchfuss.com)",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.17.0",
@@ -107,6 +107,7 @@
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
+    "underscore": "^1.8.3",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.14",
     "yargs": "^6.3.0"
@@ -114,6 +115,7 @@
   "devDependencies": {
     "babel-eslint": "^7.1.0",
     "babel-plugin-istanbul": "^3.0.0",
+    "babel-preset-es2016": "^6.16.0",
     "chai": "^3.4.1",
     "chai-as-promised": "^6.0.0",
     "chai-enzyme": "^0.6.1",
