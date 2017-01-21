@@ -22,7 +22,6 @@ class Application extends Component {
 	}
 
   render = () => {
-    console.log(this)
     const { routes, store } = this.props
 
     return <Provider store={store}>
