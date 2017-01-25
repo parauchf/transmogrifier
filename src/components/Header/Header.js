@@ -1,30 +1,27 @@
 import React, { Component, PropTypes } from 'react'
 import { browserHistory, Router } from 'react-router'
-import { Provider } from 'react-redux'
-import { colors } from "../../constants"
 
-console.log(colors)
+import Tool from "./Tool"
+import styles from "./header.scss"
 
-const style = {
-  flex: 0,
-  background: "steelblue",
-  padding: 0,
-  margin: 0
-}
-
-const headerStyle = {
-  color: "rgba(255,255,255,0.8)",
-  fontSize: 20,
-  fontFamily: 'Helvetica, San Serif',
-  padding: 15,
-  margin: 0
-}
 
 const Header = (props) => {
-  const {name} = props
+  const {name, fillColor, strokeColor, strokeWidth, params} = props
   return (
-    <div style={style}>
-        <h1 style={headerStyle}>{name}</h1>
+    <div className="header">
+        <div className="title-bar">
+          <h1>{params.name}</h1>
+        </div>
+        <div className="toolbar">
+          <Tool name="Fill">
+            <div className="fill-sample"
+              style={{background: fillColor}}/>
+          </Tool>
+          <Tool name="Stroke">
+            <div className="fill-sample"
+              style={{background: strokeColor}}/>
+          </Tool>
+        </div>
     </div>
   )
 }

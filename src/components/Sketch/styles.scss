@@ -1,0 +1,45 @@
+.sketch-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: crosshair;
+}
+
+.sketch-container {
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  margin: 50px;
+}
+
+.sketch-overlay {
+  z-index: 2 !important;
+}
+
+.sketch-body {
+  flex: 1 1;
+  background: aliceblue;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.sketch-pane {
+  display: flex;
+  flex: 1 1;
+  border: 1px solid white;
+  position: relative;
+}
+
+.resizer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: #DDD;
+  z-index: 2;
+  cursor: col-resize;;
+}

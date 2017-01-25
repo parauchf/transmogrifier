@@ -1,0 +1,20 @@
+.markup-viewer {
+  background: #313844;
+  display: block;
+  flex: 1 1;
+  padding: 20px;
+}
+.markup-element {
+  font-family: "courier new" monospace;
+  display: block;
+  padding: 5px;
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,100,255,0.2);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  margin: 5px;
+}
+
+.markup-element--selected {
+  border: 2px solid blue !important;
+}

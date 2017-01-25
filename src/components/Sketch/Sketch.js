@@ -1,31 +1,23 @@
 import React, { Component, PropTypes } from 'react'
-import { colors } from "../../constants"
 import _ from "underscore"
 
-import Path from '../Path'
+import SketchBase from './SketchBase'
+import Overlay from './Overlay'
+import Resizer from './Resizer'
+import MarkupViewer from './MarkupViewer'
+import styles from "./styles.scss"
 
-const style = {
-  flex: 1,
-  background: "aliceblue"
-}
-
-class Sketch extends Component {
-
-  render () {
-    const {sketch: {shapes}, params} = this.props
-    const svgParams = _.pick(params, 'width', 'height', 'version',
-      'xlmns', 'viewBox', 'baseProfile')
-    const elements = _.values(shapes).map(s => <Path key={s.id} {...s}/>)
-
-    return (
-      <div style={style}>
-        <svg {... svgParams}>
-          {elements}
-        </svg>
-      </div>
-    )
-  }
-
-}
+const Sketch = (props) => (
+  <div className="sketch-body">
+    <div className="sketch-pane">
+      <SketchBase {...props} />
+      <Overlay {...props} />
+    </div>
+    <Resizer {...props}/>
+    <div className="sketch-pane">
+      <MarkupViewer {...props} />
+    </div>
+  </div>
+)
 
 export default Sketch

@@ -1,23 +1,22 @@
 import update from 'react/lib/update'
 
-const initialState = {
-  selected: {}
-}
+const initialState = {}
 
 export default (state = initialState, action) => {
-  const { selected } = state
-  const { elementId, segment, shift} = action
+  const { shapeId, segment, shift} = action
 
   switch (action.type) {
-    case 'TOGGLE_SELECT_SEGMENT':
-      return Object.assign({}, {
-        selected: shift ? Object.assign({}, state.selected, {
-          [elementId]: !selected[elementId]
-        }) : {
-          [elementId]: true
-        }
-      })
-      break;
+    case 'CLEAR_SELECTION':
+      return {}
+
+    case 'SELECT_SHAPE':
+      // if shift is held and the shape is already selected, then deselct it
+      return (shift && shapeId in state) ? _.omit(state, shapeId) :
+      // otherwise if shift is held, add it to the selection
+        (shift) ? Object.assign({}, state, {[shapeId]: true}) :
+      // if shift is not held, select only the target shape
+        {[shapeId]: true}
+
     default:
       return state
   }

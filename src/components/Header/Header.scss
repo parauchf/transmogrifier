@@ -2,3 +2,63 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+.header {
+  flex: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.title-bar {
+  flex: 1;
+  margin: 0;
+  background: steelblue;
+  min-height: 40px;
+  h1 {
+    margin: 0;
+    color: rgba(255,255,255,0.8);
+    font-size: 20px;
+    padding: 15px;
+  }
+}
+
+.toolbar {
+  flex: 1 1;
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  background: #63738c;
+  min-height: 40px;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.1);
+}
+
+.tool-label {
+  text-align: center;
+  flex: 1;
+  color: rgba(255,255,255,0.8);
+}
+
+.tool-content {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  min-height: 20px;
+}
+
+.fill-sample {
+  background: white;
+  border: 1px solid white;
+  border-radius: 25px;
+  min-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  max-width: 50px;
+}

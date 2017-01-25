@@ -1,8 +1,8 @@
 import update from 'react/lib/update'
 import _ from "underscore"
 
-export const DEFAULT_WIDTH = 1000
-export const DEFAULT_HEIGHT = 1000
+export const DEFAULT_WIDTH = "400"
+export const DEFAULT_HEIGHT = "400"
 export const DEFAULT_VERSION = "1.2"
 export const DEFAULT_BASE_PROFILE = "full"
 export const DEFAULT_XLMNS = "http://www.w3.org/2000/svg"
@@ -14,8 +14,7 @@ const initialState = {
   width: DEFAULT_WIDTH,
   height: DEFAULT_HEIGHT,
   baseProfile: DEFAULT_BASE_PROFILE,
-  xmlns: DEFAULT_XLMNS,
-  viewBox: DEFAULT_VIEW_BOX
+  xmlns: DEFAULT_XLMNS
 }
 
 export default (state = initialState, action) => {

@@ -15,10 +15,6 @@ const style = {
 class Application extends Component {
   constructor (props) {
 		super(props)
-		this.state = {
-			loaded: false,
-			isSidebarHidden: false
-		}
 	}
 
   render = () => {

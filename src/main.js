@@ -9,6 +9,8 @@ import Application from './containers/Application'
 const initialState = window.___INITIAL_STATE__
 const store = createStore(initialState)
 
+window.__store = store
+
 // ========================================================
 // Render Setup
 // ========================================================
