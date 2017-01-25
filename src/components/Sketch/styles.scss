@@ -1,3 +1,13 @@
+@mixin nodrag() {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
 .sketch-inner {
   position: absolute;
   left: 0;
@@ -6,6 +16,8 @@
   bottom: 0;
   z-index: 1;
   cursor: crosshair;
+  margin: 30px;
+  @include nodrag;
 }
 
 .sketch-container {
@@ -40,6 +52,20 @@
   bottom: 0;
   width: 10px;
   background: #DDD;
-  z-index: 2;
-  cursor: col-resize;;
+  z-index: 3;
+  cursor: col-resize;
+  @include nodrag;
+}
+
+.resize-inidicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  left: 0;
+  border-right: 2px solid red;
+}
+
+.sketch-shape-selected {
+
 }
