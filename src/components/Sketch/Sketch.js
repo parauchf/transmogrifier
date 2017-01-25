@@ -9,12 +9,16 @@ import styles from "./styles.scss"
 
 const Sketch = (props) => (
   <div className="sketch-body">
-    <div className="sketch-pane">
+    <div
+    className="sketch-pane"
+    style={{maxWidth: `${props.paneSplit}%`}}>
       <SketchBase {...props} />
       <Overlay {...props} />
     </div>
     <Resizer {...props}/>
-    <div className="sketch-pane">
+    <div
+    className="sketch-pane"
+    style={{maxWidth: `${100 - props.paneSplit}%`}}>
       <MarkupViewer {...props} />
     </div>
   </div>
