@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Header from '../components/Header'
-import Sketch from '../components/Sketch'
+import Body from '../components/Body'
 
 import { browserHistory, Router } from 'react-router'
 import { Provider } from 'react-redux'
@@ -24,7 +24,7 @@ class Application extends Component {
       <div style={style}>
         {/* <Router history={browserHistory} children={routes} /> */}
         <Header />
-        <Sketch />
+        <Body />
       </div>
     </Provider>
   }

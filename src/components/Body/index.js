@@ -3,8 +3,7 @@ import { pure } from "recompose"
 import _ from 'underscore'
 import * as actions from './actions'
 
-import Sketch from "./Sketch"
-import Path from './shapes/Path'
+import Body from "./Body"
 
 const mapStateToProps = (state, ownProps) => {
   const {
@@ -35,9 +34,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = { ... actions }
 
-const ConnectedSketch = connect(
+const ConnectedBody = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Sketch)
+)(Body)
 
-export default ConnectedSketch
+export default ConnectedBody

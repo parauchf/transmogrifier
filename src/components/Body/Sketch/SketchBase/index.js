@@ -1,10 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import { colors } from "../../../constants"
-import _ from "underscore"
 import Path from '../shapes/Path'
 
 const SketchBase = (props) => {
-  const {shapeList, svgParams} = props
+  const {shapeList, svgParams, selectShape, clearSelection} = props
   const elements = shapeList.map(
     s => <Path key={s.id} {...s} selected = {false} />
   )

@@ -36,7 +36,7 @@ class Resizer extends Component {
     this.props.setPaneSplit(newSplit)
     this.setState({resizing: false, dragStart: null})
     document.removeEventListener('mousemove', this.onDrag)
-    document.removeEventListener('mousemove', this.onDragEnd)
+    document.removeEventListener('mouseup', this.onDragEnd)
   }
 
   render = () => {

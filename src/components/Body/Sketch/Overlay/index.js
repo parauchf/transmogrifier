@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import { colors } from "../../../constants"
 import _ from "underscore"
 
 import Path from '../shapes/Path'

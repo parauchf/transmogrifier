@@ -66,6 +66,8 @@
   border-right: 2px solid red;
 }
 
-.sketch-shape-selected {
-
+.sketch-shape--selected {
+  stroke-width: 2;
+  stroke: blue;
+  fill: url(#dots-pattern);
 }
