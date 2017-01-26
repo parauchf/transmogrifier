@@ -13,14 +13,14 @@ const Header = (props) => {
           <h1>{params.name}</h1>
         </div>
         <div className="toolbar">
-          <Tool name="Fill">
+          <Tool name="Colors">
             <div className="fill-sample"
-              style={{background: fillColor}}/>
+              style={{
+                background: fillColor,
+                border: `${strokeWidth}px solid ${strokeColor}`
+              }}/>
           </Tool>
-          <Tool name="Stroke">
-            <div className="fill-sample"
-              style={{background: strokeColor}}/>
-          </Tool>
+
         </div>
     </div>
   )
